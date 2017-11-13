@@ -15,8 +15,8 @@ Iago López Galeiras, Kinvolk
 </center>
 * Living in Berlin
 * Kinvolk co-founder
-* Worked a lot on rkt and the rktlet
-* Currently a maintainer of rkt and the rktlet
+* Worked a lot on rkt and rktlet
+* Currently a maintainer of rkt and rktlet
 
 ```
 * github: https://github.com/iaguis
@@ -32,8 +32,8 @@ Kinvolk: for-hire Linux engineering team working on core cloud infrastructure co
 </center>
 * What is rkt?
 * How does rkt work? (rkt internals)
-* What is the rktlet?
-* How does the rktlet work?
+* What is rktlet?
+* How does rktlet work?
 * What's new?
 * What's missing?
 
@@ -186,6 +186,7 @@ Note:
 
 </small>
 Note:
+* rkt has the pod concept but it was originally immutable
 * These map pretty cleanly to systemd
  * add: create a new unit file and load it
  * start: start the unit file
@@ -233,16 +234,33 @@ Note:
 
 
 <center>
+### rktlet: recent developments
+</center>
+<small>
+* Update kubernetes vendoring
+* Lots of bugfixes
+* Remove journal2cri
+* Extensive testing
+
+</small>
+
+
+
+<center>
 ### rkt: what comes next?
 </center>
 <small>
 * Update CNI version to 0.6.0
 * Stabilize rkt experiments and remove `RKT_EXPERIMENT_*` env variables
 * Experiment with using `runc` to set up stage2 runtime
-* Experiment with casync
 * General bugfixing :)
+* Experiment with casync
 
 </small>
+Note:
+* K8s updated CNI to 0.6.0 recently
+* Code in iottymux is not *ideal*
+* Problem: using systemd unit files, we're behind runc
 
 
 
